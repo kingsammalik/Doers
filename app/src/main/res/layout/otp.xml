@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.doers.Activity.OTP">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolotp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="40dp"
+        android:background="@color/colorPrimary"
+         >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One Time Password"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textColor="@color/white"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="130dp"
+        android:layout_below="@+id/toolotp"
+        >
+
+    </View>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="130dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp"
+        android:id="@+id/view"
+        >
+    </View>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="100dp"
+        android:src="@drawable/otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/txtview"
+        android:layout_below="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="30dp"
+        android:text="@string/textfav"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="160dp"
+        android:layout_below="@+id/view"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/editvarify"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="8dp"
+            android:inputType="phone"
+            android:hint="Enter Verification Code"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_otp"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/check24"
+            android:id="@+id/check"
+
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/check"
+            android:layout_centerHorizontal="true"
+            android:text="Resend Me"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

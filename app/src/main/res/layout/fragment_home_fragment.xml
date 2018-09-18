@@ -1,0 +1,151 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/tools"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@color/yellow"
+                android:background="@color/yellow"
+                android:layout_marginTop="5dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:text="Upcoming Events"
+                android:textColor="#0a0816"
+                android:padding="2dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/upcoming_events"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                />
+        </RelativeLayout>
+
+        <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabupcoming"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/yellow"
+            android:background="@color/yellow"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:text="Team Doer Gallery"
+            android:textColor="#0a0816"
+            android:padding="2dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventsgallery"
+            android:layout_marginLeft="20dp"
+            />
+</RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabevents"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            local:tabBackground="@drawable/selected_indicator"
+            local:tabGravity="center"
+            local:tabIndicatorHeight="0dp"
+            local:tabPaddingStart="7dp"
+            local:tabPaddingEnd="7dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <View
+                android:layout_width="8dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@color/yellow"
+                android:background="@color/yellow"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:text="Manas Roul Videos"
+                android:textColor="#0a0816"
+                android:padding="2dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/biblical"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@+id/biblical"
+                android:background="@drawable/chip"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="More"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                />
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/manasrecycler"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="100dp"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>

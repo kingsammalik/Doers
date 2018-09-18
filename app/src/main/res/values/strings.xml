@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Team Doers</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="teamgallery">Team Gallery</string>
+    <string name="myfav">My Favourite</string>
+    <string name="textfav">we have sent otp to your registered mobile number</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="password">Password</string>
+    <string name="emailAddress">Mobile Number</string>
+    <string name="hide_bottom_view_on_scroll_behavior">blank</string>
+</resources>
