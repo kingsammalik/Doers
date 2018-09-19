@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +25,10 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.admin.doers.Activity.HomeActivity;
 import com.example.admin.doers.Adapter.GalleryAdapter;
 import com.example.admin.doers.Adapter.Gold_Adapter;
+import com.example.admin.doers.Interface.BaseModel;
 import com.example.admin.doers.ItemClickSupport;
 import com.example.admin.doers.Model.Gallery_model;
 import com.example.admin.doers.Model.Gold_model;
@@ -148,9 +151,12 @@ public class Teamgallery extends Fragment implements GalleryAdapter.CallBack {
             public void onResponse(String response) {
                 // Log.d("response", response);
                 Log.d("fav",response);
-                Intent intent=new Intent(getContext(),Myfavourite_fragment.class);
-                startActivity(intent);
-                getActivity().finish();
+                hideDialog();
+                //Intent intent=new Intent(getContext(),Myfavourite_fragment.class);
+                //tartActivity(intent);
+                //getActivity().finish();
+                BaseModel.getFavListener().favClicked();
+
 
             }
         }, new Response.ErrorListener() {
@@ -178,5 +184,6 @@ public class Teamgallery extends Fragment implements GalleryAdapter.CallBack {
     @Override
     public void onFavClicked(String url) {
         Favourites(url);
+        System.out.println("fav url "+url);
     }
 }

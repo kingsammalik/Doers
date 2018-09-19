@@ -41,6 +41,7 @@ import android.widget.Toast;
 
 import com.example.admin.doers.Constants.Constants;
 import com.example.admin.doers.Fragments.MoreVideos;
+import com.example.admin.doers.Interface.BaseModel;
 import com.example.admin.doers.Preference.ComminPreference;
 import com.example.admin.doers.Fragments.Contact_fragment;
 import com.example.admin.doers.Fragments.Home_fragment;
@@ -64,10 +65,10 @@ import java.util.UUID;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,BaseModel.FavListener {
 
     TextView textView;
-    Toolbar tool;
+    public Toolbar tool;
     boolean doubleBackToExitPressedOnce = false;
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
@@ -86,6 +87,8 @@ public class HomeActivity extends AppCompatActivity
     //Uri to store the image uri
     private Uri filePath;
 
+    private  BottomNavigationView navigations;
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -102,7 +105,7 @@ public class HomeActivity extends AppCompatActivity
 
 
         }
-
+        BaseModel.setFavListener(this);
 
         Fragment fragment = new Home_fragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
@@ -111,7 +114,7 @@ public class HomeActivity extends AppCompatActivity
         tool.setTitle("Home");
         setSupportActionBar(tool);
 
-        BottomNavigationView navigations = (BottomNavigationView) findViewById(R.id.navigation);
+        navigations = (BottomNavigationView) findViewById(R.id.navigation);
 
         CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) navigations.getLayoutParams();
         layoutParams.setBehavior(new com.example.admin.doers.BottomListBehaviour.BottomNavigationViewBehavior());
@@ -491,4 +494,12 @@ public class HomeActivity extends AppCompatActivity
     }
 
 
+    @Override
+    public void favClicked() {
+        navigations.setSelectedItemId(R.id.myfav);
+        /*Myfavourite_fragment fragment2 = new Myfavourite_fragment();
+        FragmentManager fragmentManager2 = getSupportFragmentManager();
+        fragmentManager2.beginTransaction().replace(R.id.container, fragment2).commit();
+        ((HomeActivity) getActivity()).tool.setTitle("My Favourites");*/
+    }
 }
